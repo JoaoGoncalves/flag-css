@@ -2,11 +2,97 @@
 <html>
 	<head>
 		<title>CSS Selectors</title>
+		<style>
+
+			/* Selectores de CSS */
+
+			/* selector universal */
+			/* * {
+				font-family: arial;
+			} */
+
+
+			/* Selectores de elementos (tags html) */
+
+			body {
+				font-family: arial; /* herança */
+			}
+
+			h1, h2, h3 {
+				color: darkgreen;
+			}
+			
+			p {
+				font-family: courier;
+			}
+			
+
+			/* classes de formatação */
+
+			/* classes independentes */
+			.destaque {
+				color: tomato;
+				font-style: italic;
+				margin: 10px 50px;
+			}
+
+			/* classes dependentes */
+			/* p.destaque {
+				color: tomato;
+				font-style: italic;
+				margin: 10px 50px;
+			} */
+
+			.xpto {
+				font-weight: bold;
+				background-color: crimson;
+				color: aliceblue;
+			}
+
+			/* Selectores de ID's (A EVITAR) */
+			#introduction {
+				background-color: aqua;
+			}
+
+
+			/* Selectores contextuais ou descendentes */
+			section.noticias p {
+				background-color: chocolate;
+				color: antiquewhite;
+			}
+
+			/* Selectores descendentes de 1º Nivel */
+			section.noticias > h1 {
+				color: tomato;
+			}
+
+
+			ul > li a {
+				text-decoration: none;
+				color: brown;
+			}
+
+				
+			/* ESPECIFICIDADE das regras */
+
+			/* 
+			  A        B          C
+			(id)   (classes)  (elementos)
+		1-   0          2           4 
+		2- 	 1			1			2	
+			*/
+
+			main.conteudos section.noticias p a {color: red;} /* 1 */
+			#conteudos p a.btn {color: blue} /* 2 */
+
+
+
+		</style>
 	</head>
 	<body>
 		<h1><a id="top">Kitchen Garden Calendar</a></h1>
 		<p id="introduction">Here you can read our handy guide about what to do when.</p>
-		<h2>Spring</h2>
+		<h2 class="destaque xpto">Spring</h2>
 		<ul>
 			<li><a href="../../_css_inicio_parte1/1_intro/mulch.html">Spring mulch vegetable beds</a></li>
 			<li><a href="../../_css_inicio_parte1/1_intro/potato.html">Plant out early potatoes</a></li>
@@ -14,8 +100,34 @@
 			<li><a href="../../_css_inicio_parte1/1_intro/beet.html">Sow beet seeds</a></li>
 			<li><a href="../../_css_inicio_parte1/1_intro/zucchini.html">Sow zucchini seeds</a></li>
 			<li><a href="../../_css_inicio_parte1/1_intro/rhubarb.html">Deadhead rhubarb flowers</a></li>
+			<ol>
+				<li><a href="#">um</a></li>
+				<li><a href="#">doiso</a></li>
+				<li><a href="#">tres</a></li>
+			</ol>
 		</ul>
 		<p class="note">This page was written by <a href="mailto:jon@example.org">jon@example.org</a> for <a href="http://www.wiley.com">Wiley</a>.</p>
 		<p><a href="#top">Top of page</a></p>
+
+		<section>
+			<h1>titulo de outra section</h1>
+		</section>
+
+		<section class="noticias" >
+			<h1>Secção de Noticias</h1>
+			<p class="destaque">Area de noticiais da minha pagina</p>
+
+
+			<article>
+				<h1>titulo da noticia 1</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio debitis expedita provident ut, ipsam quos hic repudiandae numquam velit commodi accusantium enim ea odio nulla reprehenderit in atque quibusdam eos?</p>
+			</article>
+
+			<article>
+				<h1>titulo da noticia 2</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio debitis expedita provident ut, ipsam quos hic repudiandae numquam velit commodi accusantium enim ea odio nulla reprehenderit in atque quibusdam eos?</p>
+			</article>
+		</section>
+
 	</body>
 </html>
