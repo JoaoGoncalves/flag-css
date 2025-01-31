@@ -4,6 +4,43 @@
         <title>Font Size</title>
         <style type="text/css">
 
+            /* unidades de medida absolutas (devem evitar) */
+            /* px, pt, pc, mm, cm, in, ... */
+
+
+            /* unidades de medida relativas */
+            /* em, exs, %, vw, vh, rem, ... */
+
+
+            body {
+                font-size: 18px; /* default */
+            }
+
+            h1 {
+                /* font-size: 40px; */
+                /* 
+                1em ---- 16px 
+                 x  ---- 40px
+                */
+             /*    font-size: 2.5em; */
+                font-size: 2.5rem;
+            }
+
+            h2 {
+/*                 font-size: 32px; */
+                font-size: 2em;
+            }
+
+            p{
+                /* font-size: 18px; */
+                font-size: 1.125em;
+            }
+
+
+            section {
+                font-size: .5em;
+            }
+
         </style>
     </head>
     <body>
@@ -12,5 +49,12 @@
         <p class="intro">The <a class="breed" href="http://en.wikipedia.org/wiki/Briard">briard</a>, or berger de brie, is a large breed of dog traditionally used as a herder and guardian of sheep.</p>
         <h2>Breed History</h2>
         <p>The briard, which is believed to have originated in France, has been bred for centuries to herd and to protect sheep. The breed was used by the French Army as sentries, messengers and to search for wounded soldiers because of its fine sense of hearing. Briards were used in the First World War almost to the point of extinction. Currently the population of briards is slowly recovering. Charlemagne, Napoleon, Thomas Jefferson and Lafayette all owned briards.</p>
+
+        <section>
+            <h1>titulo da section</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae ullam iusto neque suscipit magni impedit, magnam id, ipsam itaque totam! Provident necessitatibus possimus architecto alias iure cum officiis ipsa.</p>
+            <p>Quidem, sint odio ipsam ducimus qui eaque, omnis impedit magni quis fuga quam reprehenderit alias vitae ut eveniet perferendis quos nihil. Magnam dolor iste tempore ipsa, animi corrupti ut vero.</p>
+            <p>Veniam quasi distinctio nam corrupti, voluptate sint exercitationem obcaecati dignissimos dolorum ratione corporis in libero maiores eligendi deleniti numquam porro? Odio fugiat exercitationem rem accusantium! Voluptatibus nostrum excepturi nobis ex.</p>
+        </section>
     </body>
 </html>
