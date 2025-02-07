@@ -4,10 +4,20 @@
         <title>Image Sizes</title>
         <style type="text/css">
 
+            img, video, object {
+                max-width: 100%; /* colocar imagens responsive */
+            }
+
+            .img1 {
+                /* width: 200px; */
+                height: auto;
+            }
+                
+
         </style>
     </head>
     <body>
-        <img src="images/magnolia-large.jpg" alt="Magnolia" />
+        <img src="images/magnolia-large.jpg" alt="Magnolia" class="img1" />
         <img src="images/magnolia-medium.jpg" alt="Magnolia" />
         <img src="images/magnolia-small.jpg" alt="Magnolia" />
     </body>
