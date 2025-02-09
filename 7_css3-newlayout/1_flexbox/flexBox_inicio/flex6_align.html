@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="basic.css">
+    <style>
+        .container {
+            border: 5px solid #ffcc5c;
+            display: flex;
+            height: 100%;
+            
+            align-items: center;
+        }
+        
+        .container > div {
+            flex:1;
+        }
+        
+        .home{
+            align-self: flex-start;
+        }
+        
+        .search{
+            align-self: stretch;
+        }
+        
+        .logout {
+            align-self: flex-end;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <nav class="container">
+        <div class="home">Home</div>
+        <div class="search">Search</div>
+        <div class="logout">Logout</div>
+    </nav>
+</body>
+</html>
