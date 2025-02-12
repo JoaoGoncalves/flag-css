@@ -1,0 +1,70 @@
+
+/* estilos globais */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main, footer {
+    width: 640px;
+    padding: 15px;
+    margin: 20px auto;
+}
+
+main {
+    background-color: #E8E8E6;
+    text-align: center;
+}
+
+
+header img {
+    margin: 10px 0;
+}
+
+
+/* section TEAS */
+
+section.teas h1 {
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+section.teas header {
+    padding: 30px 70px;
+}
+
+section.tea-types {
+    display: flex;
+    gap: 15px;
+}
+
+article.tea {
+    height: 750px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex:1;
+}
+
+article.tea p {
+    flex-basis: 100px;
+}
+
+article.tea img:first-child {
+    max-width: 70%;
+}
+
