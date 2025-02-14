@@ -35,8 +35,8 @@ header img {
 
 /* section TEAS */
 
-section.teas h1 {
-    font-size: 2.5em;
+section.teas header h1 {
+    font-size: 3em;
     font-weight: normal;
 }
 
@@ -50,7 +50,7 @@ section.tea-types {
 }
 
 article.tea {
-    height: 750px;
+    height: 600px;
 
     display: flex;
     flex-direction: column;
@@ -60,11 +60,44 @@ article.tea {
     flex:1;
 }
 
-article.tea p {
-    flex-basis: 100px;
+article.tea h1 {
+    font-size: 1.5em;
 }
 
-article.tea img:first-child {
-    max-width: 70%;
+article.tea > * {
+    flex: 1;
+    gap: 5px;
 }
 
+article.tea a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 15px;
+
+    flex: 0;
+}
+
+section.promo {
+    border-top: 2px solid gray;
+    margin-top: 50px;
+    padding: 35px 0;
+}
+
+footer {
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 50px;
+}
+
+footer ul li {
+    flex: 1;
+}
