@@ -1,0 +1,71 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(39, 37, 37);
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+}
+
+header{
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 20vh;
+}
+
+section {
+    background-color: rgb(71, 69, 69);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1em;
+}
+
+section a {
+    text-decoration: none;
+    color: tomato;
+}
+
+figure img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+}
+
+.c2xr1{
+    grid-column: span 2;
+}
+.c2xr2{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.c3xr2{
+    grid-column: span 3;
+    grid-row: span 2;
+}
+.c3xr1{
+    grid-column: span 3;
+}
+
+.img-txt {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+}

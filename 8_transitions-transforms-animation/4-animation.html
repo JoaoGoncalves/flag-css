@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes anim {
+           0%{
+            background-color: greenyellow;
+           }
+
+           100%{
+            background-color: rgb(158, 15, 75);
+            border-radius: 50%;
+
+            transform: scale(3) rotate(720deg);
+           }
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100vh;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+
+            border: 2px solid white;
+
+            /* animation-name: anim;
+            animation-duration: 5s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+            animation: anim 5s ease-out alternate infinite;
+
+            
+        }
+
+        .box2 {
+            animation: anim 2s ease-out alternate infinite;
+        }
+
+        .box2:hover{
+            cursor: pointer;
+            animation-play-state: paused;
+        }
+
+
+
+    </style>
+</head>
+<body>
+   <div class="box"></div>
+   <div class="box box2"></div>
+</body>
+</html>

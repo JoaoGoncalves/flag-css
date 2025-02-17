@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+
+            background-color: bisque;
+            padding: 20px;
+        }
+
+        a.btn {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+
+            background-color: rgb(85, 107, 47);
+            color: white;
+            padding: .5em 1em;
+            border-radius: 6px;
+
+            /* transition */
+            /* transition-property: background-color;
+            transition-duration: 500ms;
+            transition-delay: 250ms;
+            transition-timing-function: ease-out ; */
+
+            /* transition: background-color .5s ease-in 250ms;
+            transition: padding .2s ease-in 250ms; */
+            transition: all 1s;
+
+        }
+
+        a:hover.btn, a:focus.btn{
+            background-color: rgb(255, 99, 71);
+            padding: .5em 1.5em;
+            color: brown;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Transitions Em Css3</h1>
+    <hr>
+
+    <nav>
+        <a href="#" class="btn">Botao Lindo</a>
+        <a href="#" class="btn">Botao Lindo</a>
+        <a href="#" class="btn">Botao Lindo</a>
+    </nav>
+    
+</body>
+</html>
