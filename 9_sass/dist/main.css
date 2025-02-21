@@ -38,11 +38,23 @@ header h1 {
   color: white;
 }
 
-a {
+/* EXTEND, criar includes noutras propriedades */
+.btn-dark, .btn-light {
+  display: inline-block;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.btn-light {
+  background-color: #f4f4f4;
   color: #333;
 }
-a:hover {
-  color: coral;
+.btn-dark {
+  background-color: #333;
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
