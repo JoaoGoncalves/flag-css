@@ -1,0 +1,20 @@
+@use "sass:color";
+
+@function set-text-color($color){
+    //@if (lightness($color) > 50){
+    //@if (color.lightness($color) > 50){
+    @if (color.channel($color, "lightness", $space: hsl) > 50){
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+}
+
+/* mixin */
+
+@mixin transform($property){
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    -o-transform: $property;
+    transform: $property;
+}

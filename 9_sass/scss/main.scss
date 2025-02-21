@@ -1,5 +1,8 @@
 
 @use 'variables' as *;
+@use 'functions' as *;
+@use 'btns';
+
 
 * {
     margin: 0;
@@ -27,7 +30,7 @@ body {
 header {
 
     background-color: $dark-color;
-    color: $light-color;
+    color: set-text-color($dark-color);
     padding: 1rem;
 
     h1 {
@@ -41,35 +44,34 @@ header {
 
     &-a{
         background-color: $primary-color;
-        color: white;
+        color: set-text-color($primary-color);
     }
 
     &-b{
         background-color: $secondary-color;
-        color: white;
+        color:set-text-color($secondary-color);
     }
 }
 
-/* EXTEND, criar includes noutras propriedades */
-%btn-shared{
-    display: inline-block;
-    border: none;
-    padding: .7rem 1.5rem;
-    cursor: pointer;
-    text-decoration: none;
-    margin-top: 1rem;
-}
 
 .btn {
     &-light{
         @extend %btn-shared;
         background-color: $light-color;
-        color: #333;
+        color: set-text-color($light-color);
+
+        &:hover{
+            @include transform(rotate(10deg));
+        }
     }
 
     &-dark{
         @extend %btn-shared;
         background-color: $dark-color;
-        color: #fff;
+        color: set-text-color($dark-color);
+
+        &:hover{
+            @include transform(rotate(-5deg));
+        }
     }
 }

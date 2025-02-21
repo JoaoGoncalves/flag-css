@@ -1,5 +1,16 @@
 /* PARTIALS, nao sao compilados */
 /* VARIAVEIS */
+/* mixin */
+/* EXTEND, criar includes noutras propriedades */
+.btn-light, .btn-dark {
+  display: inline-block;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +30,7 @@ body {
 
 header {
   background-color: #333;
-  color: #f4f4f4;
+  color: #fff;
   padding: 1rem;
 }
 header h1 {
@@ -31,30 +42,32 @@ header h1 {
 }
 .section-a {
   background-color: steelblue;
-  color: white;
+  color: #fff;
 }
 .section-b {
   background-color: skyblue;
-  color: white;
-}
-
-/* EXTEND, criar includes noutras propriedades */
-.btn-dark, .btn-light {
-  display: inline-block;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  cursor: pointer;
-  text-decoration: none;
-  margin-top: 1rem;
+  color: #333;
 }
 
 .btn-light {
   background-color: #f4f4f4;
   color: #333;
 }
+.btn-light:hover {
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
 .btn-dark {
   background-color: #333;
   color: #fff;
+}
+.btn-dark:hover {
+  -webkit-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }
 
 /*# sourceMappingURL=main.css.map */
