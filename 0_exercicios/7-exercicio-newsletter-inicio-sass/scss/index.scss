@@ -1,0 +1,145 @@
+@use 'variables' as *;
+@use 'reset';
+
+
+body {
+    font: {
+        family: $font-stack;
+        size: 16px;
+    }
+
+    background-color: #eee;
+    color: $dark-color;
+
+    padding: $inner-space;
+}
+
+section {
+    &.newsletter{
+        width: 640px;
+        background-color: $light-color;
+        margin: auto;
+        padding: $inner-space;
+    }
+}
+
+header{
+    height: 300px;
+    background: {
+        image: url(../images/reuniao.jpg);
+        size: cover;
+        color:bisque;
+    }
+
+    padding: $default-font-size * 3 $default-font-size;
+    text-align: center;
+    color: $dark-color;
+
+    h1 {
+        font-size:$default-font-size * 2;
+    }
+
+    a {
+
+        text: {
+            decoration: none;
+            transform: capitalize;
+        }
+
+        color: $light-color;
+        background-color:$bg-color;
+
+        width: 100px;
+        height: 50px;
+        display: inline-block;
+        margin: $default-font-size * 3 auto;
+        border-radius: $tiny-font-size * 3;
+        font-size: $default-font-size * .8;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+}
+
+
+
+
+
+article{
+
+    &.textos{
+        font-size: $default-font-size;
+        border-bottom: 1px solid $dark-color;
+        padding: $inner-space 0;
+
+        p {
+            margin: $tiny-font-size * 5 0;
+        }
+    }
+
+    &.miniaturas{
+        h2 {
+
+            text: {
+                align: center;
+                transform: uppercase;
+            }
+            
+            font: {
+                family: courier, monospace;
+                size: $default-font-size * 1.2;
+                font-weight: normal;
+            }
+
+            color: $dark-color;
+            letter-spacing: $tiny-font-size;
+            margin: $inner-space 0 ;
+        }
+
+        div {
+            &.imagens{
+                display: flex; 
+                justify-content: space-between;
+            }
+
+            img {
+                padding: $tiny-font-size;
+                border:1px solid #333;
+                opacity: .7;
+                transition: all 0.3s ease-out;
+
+                &:hover{
+                    transform: scale(1.2);
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    background-color: $bg-color;
+    color: $light-color;
+
+    height: 100px;
+    margin-top: $inner-space;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+
+
+
+
+
