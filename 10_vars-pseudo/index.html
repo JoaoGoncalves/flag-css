@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+       :root{
+        /* definir variaveies */
+        --cor-principal: rgb(211, 138, 173);
+        --cor-secundaria: rgb(93, 158, 118);
+
+        --font-principal: courier;
+
+        --margem-large: 200px;
+        --margem-small: 50px;
+       }
+
+       /* scope das variaveis */
+       main {
+        --bg-color: yellow;
+
+        width: calc(100vw - var(--margem-large));
+        margin: 20px auto;
+       }
+
+       
+
+       h1 {
+        background-color: var(--bg-color);
+       }
+
+
+        input[type='text'] {
+            background-color: var(--cor-principal);
+        }
+
+        p[class*='destaque']{
+            background-color: var(--cor-secundaria);
+        }
+
+        p {
+            font-family: var(--font-principal);
+            font-size: .7em;
+        }
+
+        /* a[href$='.pdf']{
+            padding-right: 1em;
+            background-image: url("pdf.png");
+            background-repeat: no-repeat;
+            background-position: right center;
+        } */
+
+        /* a[href$='.pdf']::after{
+            content: url(pdf.png);
+            margin-left: 1px;
+        } */
+        /* a[href$='.pdf']::before{
+            content: url(pdf.png);
+            margin-right: 1px;
+        } */
+        a[href$='.pdf']::before{
+            content: '🐱';
+            margin-right: 1px;
+        }
+
+        a[href^='http://']::after{
+            /* content: url("external-link.png"); */
+            content: "😉";
+        }
+
+        input::placeholder{
+            color: tomato;
+        }
+
+        p::selection  {
+            background-color: yellowgreen;
+        }
+
+       
+
+
+    </style>
+</head>
+<body>
+    <h1>Selectores Atributos, Pseudo, variaveis</h1>
+    <hr>
+    <main>
+        <h1>titulo main</h1>
+        <p>
+            <input type="text" value="joao" > <br>
+            <input type="email"  placeholder="inserir email">
+        </p>
+
+        <p>joao ipsum dolor sit, amet consectetur adipisicing elit. Aut tempora mollitia cupiditate sit itaque quaerat quas facilis rem, veniam, consequuntur tenetur dolorem similique iusto ipsa ea inventore? Provident, ducimus reprehenderit.</p>
+
+        <p>
+            ler o nosso <a href="relatorio.pdf">relatorio</a> de qualquer coisa.
+        </p>
+
+        <p class="destaque"> quibusdam molestiae,<a href="http://flag.pt" target="_blank" >SITE DA FLAG</a> ipsum quaerat qui, odio dolore!</p>
+
+        <p class="xpto destaque">Esse minima voluptates nesciunt, rerum quas deserunt explicabo blanditiis, <a href="doc.pdf">documento</a> quis at molestiae tempora illum cumque repellendus, impedit repudiandae atque ex velit vel sapiente delectus. Laborum ea impedit dignissimos odio deserunt.</p>
+    </main>
+</body>
+</html>
