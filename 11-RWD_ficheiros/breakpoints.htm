@@ -9,7 +9,94 @@
     
     <title>Determining breakpoints</title>
     <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        img, object, video {
+            max-width: 100%;
+        }
+
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: justify;
+
+            font-size: 16px;
+            /* font-size: 62.5%; */
+            width: 85%;
+            margin: 20px auto ;
+
+            background-color: aquamarine;
+        }
+
+        section{
+            margin-top: 1.5em;
+        }
+        p{
+            padding: .6em 0;
+        }
+
+
+
+        /* breakoppoints para as media queries */
+        @media screen and (min-width: 800px) {
+            
+            body {
+                background-color: darksalmon;
+                font-size: 18px;
+
+
+                display: flex;
+                gap: 1em;
+
+                flex-wrap: wrap;
+            }
+
+            .col1{
+                flex: 3;
+            }
+            .col2{
+                flex: 2;
+            }
+
+        }
+
+
+        @media screen and (min-width: 1240px) {
+            
+            body {
+                background-color: rgb(166, 94, 131);
+                font-size: 20px;
+
+            }
+
+            .col3{
+                flex: 2;
+
+                flex-wrap: nowrap;
+            }
+
+        }
+
+        @media screen and (orientation: landscape) {
+            body {
+                background-color: rgb(72, 68, 70);
+                font-size: 20px;
+                color: white;
+
+            }
+        }
         
+
+        /* @media screen and (min-width: 650px) and (max-width: 900px)  {
+            p {
+                color:white
+            }
+        } */
         
     </style>
 </head>
